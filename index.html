@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talons Game | 100+ Oyun Platformu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <h1>Talons Game</h1>
+        <p>
+          100 farklı oyundan oluşan büyük oyun platformu. Hızlı, temiz, düzenli ve ölçeklenebilir bir temel.
+        </p>
+        <div class="hero__stats">
+          <div><span id="gameCount">0</span><small>Toplam Oyun</small></div>
+          <div><span id="playableCount">0</span><small>Anında Oynanabilir</small></div>
+          <div><span id="comingSoonCount">0</span><small>Yakında</small></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="toolbar">
+        <input id="searchInput" type="search" placeholder="Oyun ara... (örn. puzzle, race, math)" />
+        <select id="categoryFilter">
+          <option value="all">Tüm Kategoriler</option>
+        </select>
+      </section>
+
+      <section>
+        <h2>Oyun Kütüphanesi</h2>
+        <div id="gameGrid" class="game-grid"></div>
+      </section>
+    </main>
+
+    <div id="gameModal" class="modal hidden" aria-hidden="true">
+      <div class="modal__card">
+        <button id="closeModal" class="modal__close" aria-label="Kapat">×</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Talons Game • Oyunlar düzenli kategori mimarisiyle listelenir.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
